@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+body {
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url(images/Robert\ Kaufman\ Autumn\ Fields\ -\ Tonal\ Oregano\ Metallic\ Yardage\ Size\ 44__45_\ in\ Blue\ _\ Cotton\ _\ Traditional.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.containers {
+  display: flex;
+}
+
+.images-container {
+  width: 200px;
+  height: 340px;
+  display: flex;
+  border-radius: 6px;
+  flex-wrap: wrap;
+  margin: 20px auto 0;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s;
+}
+
+.images-container img {
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.images-container img.active {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin: -30px auto;
+  width: 200px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #a19d9d21;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.controls .previous,
+.controls .next {
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  background-color: #0e2954;
+  align-items: center;
+  height: 26px;
+  width: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.controls .previous {
+  position: absolute;
+  left: 5px;
+}
+
+.controls .previous.done {
+  background-color: #14406254;
+  pointer-events: none;
+}
+
+.controls .next {
+  position: absolute;
+  right: 5px;
+}
+
+.controls .next.done {
+  background-color: #14406254;
+  pointer-events: none;
+}
+
+.controls ul {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.controls ul li {
+  background-color: #b6b6b6;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.controls ul li.active {
+  background: #0e2954;
+}
+
+img {
+  max-width: 100%;
+}
