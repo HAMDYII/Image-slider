@@ -41,6 +41,7 @@ ul {
   max-width: 100%;
   opacity: 0;
   transition: opacity 0.3s;
+  border-radius: 6px;
 }
 
 .images-container img.active {
